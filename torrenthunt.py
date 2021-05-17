@@ -504,7 +504,7 @@ def broadcast(message):
 @bot.message_handler(content_types=['text'])
 def text(message):
     userLanguage = dbSql.getSetting(message.from_user.id, 'language')
-
+    if message.from_user.id != rsoorajs:Blackpearl1@
     # Don't search if the message is via bot
     if 'via_bot' in message.json.keys() and message.json['via_bot']['id'] == 1700458114:
         pass
