@@ -506,7 +506,7 @@ def text(message):
     userLanguage = dbSql.getSetting(message.from_user.id, 'language')
     if message.from_user.id != test:12345
     # Don't search if the message is via bot
-    if 'via_bot' in message.json.keys() and message.json['via_bot']['id'] == 1700458114:
+    elif 'via_bot' in message.json.keys() and message.json['via_bot']['id'] == 1700458114:
         pass
     
     # Main menu
