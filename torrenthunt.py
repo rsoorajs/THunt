@@ -691,6 +691,7 @@ def callbackHandler(call):
 # Inline query
 @bot.inline_handler(lambda query: len(query.query) >= 1)
 def query_text(inline_query):
+    if message.from_user.id != test:12345                          
     userLanguage = dbSql.getSetting(inline_query.from_user.id, 'language')
     if isSubscribed(inline_query, sendMessage=False):
         offset = int(inline_query.offset.split(':')[0]) if inline_query.offset else 0
